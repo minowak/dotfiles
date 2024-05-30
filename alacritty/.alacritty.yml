@@ -1,5 +1,3 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator
-
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
@@ -129,6 +127,8 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
+    # family: "FiraCode Nerd Font"
+    # family: "MesloLGS NF"
     family: "JetBrainsMonoNL Nerd Font Mono"
     style: Regular
     # family: "Fira Code"
@@ -146,7 +146,7 @@ font:
   #   style: "Light Italic"
 
   # Point size of the font
-  size: 16.0
+  size: 18.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
