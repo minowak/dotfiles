@@ -9,8 +9,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/minowak/.oh-my-zsh"
-export PATH="/Users/minowak/.local/bin:$PATH"
+export ZSH="${HOME}/.oh-my-zsh"
+export PATH="${HOME}/.local/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -122,21 +122,21 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/minowak/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("${HOME}/miniforge3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/minowak/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/minowak/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "${HOME}/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/minowak/miniforge3/bin:$PATH"
+        export PATH="${HOME}/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-source /Users/minowak/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/minowak/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ${HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${HOME}/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -145,13 +145,13 @@ bindkey '^[[B' history-substring-search-down
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/minowak/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/minowak/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/minowak/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/minowak/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
 
 # bun completions
-[ -s "/Users/minowak/.bun/_bun" ] && source "/Users/minowak/.bun/_bun"
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -162,7 +162,6 @@ ulimit -n 10240
 alias vim="nvim"
 # set tmux-spotify to use Apple Music instead of Spotify
 export MUSIC_APP="Music"
-alias cnvim='XDG_CONFIG_HOME="/Users/minowak/.config/nvim_scratch" nvim'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
