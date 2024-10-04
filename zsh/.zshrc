@@ -1,8 +1,3 @@
-# Start tmux
-if [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s work
-fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -153,3 +148,5 @@ export CLOUDSDK_PYTHON=$(which python3.11)
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+alias work='tmux new-session -A -s work'
