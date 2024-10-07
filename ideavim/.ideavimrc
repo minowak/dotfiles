@@ -24,7 +24,7 @@ map <leader><leader> <Action>(GotoFile)
 map <leader>/ <Action>(FindInPath)
 map <leader>fr <Action>(RecentFiles)
 " This does not work, it stays on screen. How to achieve that? Write my own plugin?
-map <leader>bb <Action>(Switcher)
+map <leader>bb :action Switcher<CR>:action PopupMenu-return<CR>
 map <leader>` <Action>(Switcher)
 map <leader>bd <Action>(CloseContent)
 map <leader>bo <Action>(CloseAllEditorsButActive)
@@ -36,6 +36,7 @@ map gcl <Plug>CommentaryLine
 map <leader>cf <Action>(ReformatCode)
 map <leader>ca <Action>(ShowIntentionActions)
 map <leader>cR <Action>(OptimizeImports)
+map <leader>cr <Action>(RenameElement)
 map <leader>w- <Action>(SplitHorizontally)
 map <leader>w<Bar> <Action>(SplitVertically)
 map ]e <Action>(GotoNextError)
@@ -44,3 +45,5 @@ map gd <Action>(GotoImplementation)
 map gr <Action>(FindUsages)
 map <leader>gg <Action>(LazyGit.Open)
 map s <Action>(flash.search)
+map ]p :pu<CR>
+map [p O<Esc>P
